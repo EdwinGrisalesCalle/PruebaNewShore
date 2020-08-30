@@ -1,0 +1,36 @@
+﻿.Container {
+    height: 760px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-size: 12px;
+    background-image: url(../Img/portada-M4EC.jpg);
+}
+
+.Search {
+    margin:auto;
+    border: solid;
+    background-color:rgba(255, 255, 255, .87);
+}
+.btn{
+    text-align:center;
+}
+
+.row .col {
+    padding: 4% 4% 2%;
+    border-radius: 2%;
+}
+
+nav ,.page-footer {
+    background-color: #09315c;
+}
+
+nav {
+    margin-bottom: 2%;
+}
+
+.page-footer{
+    width:144%;
+    margin-left:-22%;
+}

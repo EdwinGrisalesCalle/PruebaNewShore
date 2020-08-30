@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "SearchResult";
+}
+
+
+<div class="row">
+    @if (Model != null)
+    {
+        <form class="Search col s12">
+            <h5>Disponibilidad de Vuelos</h5>
+            <table class="centered">
+                <thead>
+                    <tr>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var flight in Model)
+                    {
+                    <tr>
+
+                        <td>@flight.DepartureStation</td>
+                        <td>@flight.ArrivalStation</td>
+                        <td>@flight.DepurateDate</td>
+                        <td>@Html.ActionLink("Continuar", "Index", "Home")</td>
+                    </tr>
+
+                    }
+
+
+                </tbody>
+            </table>
+        </form>
+    }
+    </div>

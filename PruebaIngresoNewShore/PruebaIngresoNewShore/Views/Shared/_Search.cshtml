@@ -1,0 +1,47 @@
+﻿
+<div class="row">
+    @using (Html.BeginForm("SearchResult", "Home", FormMethod.Post))
+    {
+
+        <form method="post" class="Search col s12">
+            <div class="row">
+                <div class="input-field col s4">
+                    <select name="origin" id="origin" required>
+                        <option value="">Origen</option>
+                        <option value="BAQ">Barranquilla</option>
+                        <option value="BOG">Bogotá</option>
+                        <option value="BGA">Bucaramanga</option>
+                        <option value="CLO">Cali</option>
+                        <option value="CTG">Cartagena</option>
+                        <option value="MDE">Medellin</option>
+                        <option value="PEI">Pereira</option>
+                        <option value="ADZ">San Andrés</option>
+                        <option value="SMR">Santa Marta</option>
+                    </select>
+                </div>
+                <div class="input-field col s4">
+                    <select name="destination" id="destination" required>
+                        <option value="">Destino</option>
+                        <option value="BAQ">Barranquilla</option>
+                        <option value="BOG">Bogotá</option>
+                        <option value="BGA">Bucaramanga</option>
+                        <option value="CLO">Cali</option>
+                        <option value="CTG">Cartagena</option>
+                        <option value="MDE">Medellin</option>
+                        <option value="PEI">Pereira</option>
+                        <option value="ADZ">San Andrés</option>
+                        <option value="SMR">Santa Marta</option>
+                    </select>
+                </div>
+                <div class="input-field col s4">
+                    <input name="DateFly" value="Fecha de Vuelo" type="text" class="datepicker">
+                </div>
+            </div>
+            <div class="row center">
+                <div class=" col s12">
+                    <Button type="submit" class="waves-effect waves-light btn"><i class="material-icons left">search</i>Buscar vuelos</Button>
+                </div>
+            </div>
+        </form>
+    }
+</div>
