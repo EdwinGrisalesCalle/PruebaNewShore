@@ -1,0 +1,74 @@
+﻿@model IEnumerable<PruebaIngresoNewShore.Models.Flights>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/materialize.min.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+</head>
+<body class="Container">
+    @Html.Partial("_Banner")
+
+    <table class="centered Form">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepartureStation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepurateDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Transport)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Currency)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DepartureStation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ArrivalStation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DepurateDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Transport)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Currency)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @Html.Partial("_Footer")
+
+</body>
+</html>
