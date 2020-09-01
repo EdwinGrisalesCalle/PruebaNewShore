@@ -1,0 +1,94 @@
+﻿@model PruebaIngresoNewShore.Models.Flights
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/materialize.min.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <title>Delete</title>
+</head>
+@Html.Partial("_Banner")
+
+<body class="Container">
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Flights</h4>
+        <hr />
+
+
+
+        <table class="centered Form">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DepartureStation)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ArrivalStation)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DepurateDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Transport)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Currency)
+                    </th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => model.DepartureStation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.ArrivalStation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.DepurateDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Transport)
+
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(model => model.Price)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(model => model.Currency)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="row center">
+                <div class="input-field col s12">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            </div>
+        }
+    </div>
+    @Html.Partial("_Footer")
+
+</body>
+</html>

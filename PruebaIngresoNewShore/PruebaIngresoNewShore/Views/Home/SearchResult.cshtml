@@ -24,11 +24,10 @@
                     @foreach (var flight in Model)
                     {
                     <tr>
-
                         <td>@flight.DepartureStation</td>
                         <td>@flight.ArrivalStation</td>
                         <td>@flight.DepurateDate</td>
-                        <td>@Html.ActionLink("Continuar", "Index", "Home")</td>
+                        <td>@Html.ActionLink("Continuar", "Create", "Flights")</td>
                     </tr>
 
                     }

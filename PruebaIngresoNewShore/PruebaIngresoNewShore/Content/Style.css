@@ -1,5 +1,4 @@
 ﻿.Container {
-    height: 760px;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,12 +8,33 @@
 }
 
 .Search {
-    margin:auto;
-    border: solid;
-    background-color:rgba(255, 255, 255, .87);
+    margin: auto;
+    border: 1px solid;
+    background-color: rgba(255, 255, 255, .87);
 }
-.btn{
-    text-align:center;
+.FormInd {
+    width: 70%;
+    margin-left: 15%;
+    border:1px solid;
+    margin-bottom: 2%;
+    background-color: rgba(255, 255, 255, .87);
+}
+
+.Form {
+    width: 70%;
+    margin-left: 15%;
+    margin-top:6%;
+    margin-bottom: 6%;
+    background-color: rgba(255, 255, 255, .87);
+}
+
+.margin .row .col {
+    padding: 1% 1% 1% !important; 
+    border-radius: 2%;
+}
+
+.btn {
+    text-align: center;
 }
 
 .row .col {
